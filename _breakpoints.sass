@@ -1,0 +1,26 @@
+$small-break: 480px !default
+$medium-break: 800px !default
+
+=small
+  @media screen and (max-width: $small-break)
+    @content
+
+=medium
+  @media screen and (max-width: $medium-break)
+    @content
+
+=large
+  @media screen and (min-width: $small-break)
+    @content
+
+.hide-on-small
+  +small
+    display: none !important
+
+.hide-on-medium
+  +medium
+    display: none !important
+
+.hide-on-large
+  +large
+    display: none !important
